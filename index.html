@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>VOSSTEN — Coming Soon</title>
+  <title>VOSSTEN — The Vossten Way</title>
 
   <style>
     * {
@@ -13,106 +13,167 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: #0b0b0b;
-      color: #f4f1e8;
-      font-family: Arial, Helvetica, sans-serif;
       min-height: 100vh;
+      background:
+        radial-gradient(circle at top, #181818 0%, #0a0a0a 45%, #050505 100%);
+      color: #f3efe5;
+      font-family: Arial, Helvetica, sans-serif;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 30px;
+      padding: 30px 22px;
+      overflow-x: hidden;
     }
 
-    .container {
-      max-width: 900px;
+    .page {
       width: 100%;
+      max-width: 920px;
+      animation: fadeIn 1.4s ease forwards;
     }
 
-    .symbol {
-      font-size: 70px;
+    .logo-mark {
+      font-size: clamp(54px, 9vw, 82px);
       font-weight: 900;
-      letter-spacing: -10px;
-      margin-bottom: 15px;
+      line-height: 1;
+      margin-bottom: 25px;
+      letter-spacing: -6px;
+      animation: rise 1s ease forwards;
     }
 
     h1 {
-      font-size: clamp(55px, 11vw, 110px);
-      letter-spacing: 10px;
+      font-size: clamp(54px, 12vw, 112px);
+      line-height: 0.95;
+      letter-spacing: clamp(6px, 1.5vw, 14px);
       font-weight: 900;
-      margin-bottom: 10px;
+      margin-bottom: 24px;
+      animation: rise 1.1s ease forwards;
     }
 
     .est {
       font-size: 13px;
-      letter-spacing: 6px;
-      opacity: 0.6;
-      margin-bottom: 60px;
-    }
-
-    .line {
-      width: 90px;
-      height: 1px;
-      background: #f4f1e8;
-      margin: 0 auto 40px;
-      opacity: 0.5;
-    }
-
-    h2 {
-      font-size: clamp(20px, 4vw, 34px);
       letter-spacing: 7px;
+      opacity: 0.6;
+      margin-bottom: 58px;
+      animation: rise 1.2s ease forwards;
+    }
+
+    .divider {
+      width: 95px;
+      height: 1px;
+      background: #f3efe5;
+      opacity: 0.4;
+      margin: 0 auto 48px;
+    }
+
+    .tagline {
+      font-size: clamp(20px, 4vw, 34px);
+      letter-spacing: clamp(5px, 1.2vw, 9px);
       font-weight: 500;
-      margin-bottom: 25px;
+      margin-bottom: 26px;
+      animation: rise 1.3s ease forwards;
     }
 
     .coming {
-      font-size: 14px;
-      letter-spacing: 4px;
+      font-size: 13px;
+      letter-spacing: 5px;
       text-transform: uppercase;
-      opacity: 0.65;
-      margin-bottom: 60px;
+      opacity: 0.62;
+      margin-bottom: 62px;
+      line-height: 1.8;
+      animation: rise 1.4s ease forwards;
     }
 
     .socials {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      align-items: center;
+      gap: 34px;
       flex-wrap: wrap;
+      margin-bottom: 82px;
+      animation: rise 1.5s ease forwards;
     }
 
     .socials a {
-      color: #f4f1e8;
+      color: #f3efe5;
       text-decoration: none;
-      font-size: 12px;
-      letter-spacing: 3px;
+      font-size: 11px;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      opacity: 0.65;
-      transition: 0.3s ease;
+      opacity: 0.55;
+      transition: opacity 0.25s ease, transform 0.25s ease;
     }
 
     .socials a:hover {
       opacity: 1;
+      transform: translateY(-2px);
     }
 
     footer {
-      margin-top: 80px;
       font-size: 10px;
-      letter-spacing: 2px;
-      opacity: 0.35;
+      letter-spacing: 3px;
+      opacity: 0.28;
+      animation: rise 1.6s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 600px) {
+      body {
+        padding: 28px 18px;
+      }
+
       h1 {
-        letter-spacing: 5px;
+        letter-spacing: 7px;
       }
 
       .est {
-        margin-bottom: 45px;
+        margin-bottom: 48px;
       }
 
-      .symbol {
-        font-size: 55px;
+      .divider {
+        margin-bottom: 42px;
+      }
+
+      .tagline {
+        letter-spacing: 6px;
+      }
+
+      .coming {
+        letter-spacing: 4px;
+        margin-bottom: 52px;
+      }
+
+      .socials {
+        gap: 26px;
+        margin-bottom: 68px;
+      }
+
+      footer {
+        line-height: 1.8;
       }
     }
   </style>
@@ -120,26 +181,26 @@
 
 <body>
 
-  <main class="container">
+  <main class="page">
 
-    <div class="symbol">V</div>
+    <div class="logo-mark">V</div>
 
     <h1>VOSSTEN</h1>
 
     <p class="est">EST. 2026</p>
 
-    <div class="line"></div>
+    <div class="divider"></div>
 
-    <h2>THE VOSSTEN WAY</h2>
+    <h2 class="tagline">THE VOSSTEN WAY</h2>
 
     <p class="coming">
-      Something is coming.
+      The first chapter is coming.
     </p>
 
     <div class="socials">
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">TikTok</a>
-      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
     </div>
 
     <footer>
