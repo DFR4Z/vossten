@@ -85,7 +85,7 @@ body {
 }
 
 
-/* OFFICIAL VOSSTEN LOGO */
+/* OFFICIAL VOSSTEN V */
 
 .logo-wrap {
 
@@ -99,17 +99,44 @@ body {
 }
 
 
-.logo-wrap img {
+/* TRANSPARENT IMAGE USED AS MASK */
+/* THIS FORCES THE V TO EXACTLY #f2eee5 */
+
+.logo {
 
   width: 100px;
 
   max-width: 25vw;
 
-  height: auto;
-
-  display: block;
+  aspect-ratio: 1 / 1;
 
   margin: 0 auto;
+
+  background: #f2eee5;
+
+  -webkit-mask-image:
+    url("VOSSTEN_V_TRANSPARENT.png");
+
+  mask-image:
+    url("VOSSTEN_V_TRANSPARENT.png");
+
+  -webkit-mask-repeat:
+    no-repeat;
+
+  mask-repeat:
+    no-repeat;
+
+  -webkit-mask-position:
+    center;
+
+  mask-position:
+    center;
+
+  -webkit-mask-size:
+    contain;
+
+  mask-size:
+    contain;
 
 }
 
@@ -493,7 +520,7 @@ footer {
   }
 
 
-  .logo-wrap img {
+  .logo {
 
     width: 95px;
 
@@ -605,10 +632,10 @@ footer {
 
 <div class="logo-wrap">
 
-<img
-  src="VOSSTEN_V_LOCKED_EXACT_IMAGE.png"
-  alt="VOSSTEN"
->
+<div
+  class="logo"
+  aria-label="VOSSTEN"
+></div>
 
 </div>
 
